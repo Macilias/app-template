@@ -10,7 +10,20 @@ public class Main {
 
     public static void main(String... args) {
 
-        Scanner s = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Hello, to end reading line type END:");
+
+        while (in.hasNextLine()) {
+
+            String line = in.nextLine();
+
+            System.out.println("Ok, got it: " + line);
+
+            if (line.trim().equalsIgnoreCase("END")) {
+                System.exit(0);
+            }
+        }
 
     }
 }
